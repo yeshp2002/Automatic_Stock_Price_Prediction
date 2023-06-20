@@ -3,7 +3,7 @@ from datetime import date, timedelta
 from sklearn.linear_model import LinearRegression
 
 # Define the ticker symbol for the stock you want to predict
-ticker_symbol = 'AAPL'
+ticker_symbol = 'AMZN'
 
 # Retrieve historical stock data using yfinance
 end_date = date.today() - timedelta(days=1)  # Exclude current day
