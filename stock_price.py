@@ -64,6 +64,7 @@ predicted_stock_price = model.predict(X_test)
 predicted_stock_price = scaler.inverse_transform(predicted_stock_price)
 
 # Compare predicted price with today's stock price
+print("--------------------Using LSTM Layers ------------------------")
 print(f"Predicted stock price for today: {predicted_stock_price[0][0]}")
 print(f"Actual stock price for today: {today_stock_price}")
 
