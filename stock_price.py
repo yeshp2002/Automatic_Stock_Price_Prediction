@@ -11,7 +11,7 @@ ticker_symbol = 'AMZN'
 
 # Retrieve historical stock data using yfinance
 end_date = date.today() - timedelta(days=1)  # Exclude current day
-start_date = end_date - timedelta(days=365)  # Retrieve data for the past year
+start_date = end_date - timedelta(days=2*365)  # Retrieve data for the past 2 years
 data = yf.download(ticker_symbol, start=start_date, end=end_date)
 
 # Preprocess the data
