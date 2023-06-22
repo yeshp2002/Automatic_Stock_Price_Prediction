@@ -33,7 +33,7 @@ for i in range(lookback, len(scaled_data)):
 X_train, y_train = np.array(X_train), np.array(y_train)
 
 # Reshape the training data for LSTM input
-X_train = np.reshape(X_train, (X_train.shape[0], X_train.shape[1], 1))
+X_train = X_train.reshape((X_train.shape[0], X_train.shape[1], 1))
 
 # Build the LSTM model
 model = Sequential()
@@ -57,7 +57,7 @@ inputs = scaler.transform(last_year_data)
 X_test = []
 X_test.append(inputs)
 X_test = np.array(X_test)
-X_test = np.reshape(X_test, (X_test.shape[0], X_test.shape[1], 1))
+X_test = X_test.reshape((X_test.shape[0], X_test.shape[1], 1))
 
 # Predict today's stock price
 predicted_stock_price = model.predict(X_test)
